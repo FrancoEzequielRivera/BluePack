@@ -1,0 +1,155 @@
+/*BUSCADOR*/
+.tracking-buscador {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.tracking-input-group {
+    flex: 1;
+}
+
+.btn-buscar {
+    width: auto;
+    padding: 14px 32px;
+    font-size: 1rem;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/*ESTADO DESTACADO*/
+.tracking-estado-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.tracking-numero {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tracking-estado-texto {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+.tracking-badge {
+    margin-left: auto;
+}
+
+/*INFO GRID*/
+.tracking-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tracking-info-item label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+
+.tracking-info-item p {
+    font-size: 0.95rem;
+    color: #1c1c1c;
+    font-weight: 500;
+}
+
+/*HISTORIAL*/
+.tracking-historial-titulo {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1c1c1c;
+    margin-bottom: 16px;
+}
+
+.tracking-linea-tiempo {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 24px;
+}
+
+.tracking-linea-tiempo::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.tracking-evento {
+    position: relative;
+    padding: 0 0 20px 20px;
+}
+
+.tracking-evento:last-child {
+    padding-bottom: 0;
+}
+
+.tracking-evento::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #338DD4;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #338DD4;
+}
+
+.tracking-evento:first-child::before {
+    background: #338DD4;
+    box-shadow: 0 0 0 2px #338DD4;
+}
+
+.tracking-evento-fecha {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 4px;
+}
+
+.tracking-evento-estado {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1c1c1c;
+}
+
+.tracking-evento-notas {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+@media (max-width: 640px) {
+    .tracking-buscador   { flex-direction: column; align-items: stretch; }
+    .tracking-info-grid  { grid-template-columns: 1fr; }
+}
+
+#btn-tracking{
+    padding: 10px 40px;
+}

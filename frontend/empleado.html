@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleado — BluePack</title>
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/empleado.css">
+</head>
+<body class="panel-page">
+
+    <header class="panel-header">
+        <div class="brand">
+            <div class="brand-logo">
+                <span class="brand-blue">Blue</span><span class="brand-white">Pack</span>
+            </div>
+            <div class="brand-sub">Correo Internacional</div>
+        </div>
+
+        <div class="header-user">
+            <span id="nombre-empleado"></span>
+            <a href="tracking.html"><button class="btn-primary" id="">Tracking</button></a>
+            <button class="btn-logout" id="btn-logout">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="panel-content">
+
+        <div class="alert" id="alerta-global" role="alert" aria-live="polite"></div>
+
+        <section class="section-card">
+            <h2 class="section-title">Listado de pedidos de todos los usuarios</h2>
+
+            <div class="alert alert-error" id="error-tabla" role="alert"></div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Destino</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-body">
+                        <tr>
+                            <td colspan="5" class="empty-state">Cargando pedidos...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section-card" id="seccion-detalle" style="display: none;">
+            <h2 class="section-title">Detalles del pedido seleccionado</h2>
+
+            <div class="detalle-layout">
+
+                <div class="detalle-datos" id="detalle-datos"></div>
+
+                <div class="detalle-acciones">
+                    <p class="acciones-titulo">Cambiar estado</p>
+
+                    <div class="botones-estado" id="botones-estado"></div>
+
+                    <div class="form-group" id="grupo-nota">
+                        <label for="input-nota">Nota</label>
+                        <input type="text" id="input-nota" placeholder="Nota opcional...">
+                    </div>
+
+                    <div class="form-group" id="grupo-motivo" style="display: none;">
+                        <label for="input-motivo">Motivo de rechazo</label>
+                        <textarea id="input-motivo" placeholder="Ingresá el motivo..."></textarea>
+                    </div>
+
+                    <div class="alert alert-error" id="error-acciones" role="alert"></div>
+
+                    <button class="btn-primary btn-actualizar" id="btn-actualizar">
+                        Actualizar pedido
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/empleado.js"></script>
+
+</body>
+</html>

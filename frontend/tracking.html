@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking — BluePack</title>
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/tracking.css">
+</head>
+<body class="panel-page">
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="panel-header">
+        <div class="brand">
+            <div class="brand-logo">
+                <span class="brand-blue">Blue</span><span class="brand-white">Pack</span>
+            </div>
+            <div class="brand-sub">Correo Internacional</div>
+        </div>
+
+        <div class="header-user">
+            <span id="nombre-usuario"></span>
+            <a href="index.html"><button class="btn-primary" id="btn-tracking">Inicio</button></a>
+            <button class="btn-logout" id="btn-logout">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <!-- ═══ CONTENIDO ═══ -->
+    <main class="panel-content">
+
+        <!-- ─── Buscador ─── -->
+        <section class="section-card">
+            <h2 class="section-title">Consultar envío</h2>
+
+            <div class="tracking-buscador">
+                <div class="form-group tracking-input-group">
+                    <label for="input-tracking">Número de tracking</label>
+                    <input
+                        type="text"
+                        id="input-tracking"
+                        placeholder="Ej: AR-XXXXXXXX-2026"
+                        autocomplete="off"
+                    >
+                </div>
+                <button class="btn-primary btn-buscar" id="btn-buscar">
+                    Buscar
+                </button>
+            </div>
+
+            <div class="alert alert-error" id="error-busqueda" role="alert"></div>
+        </section>
+
+        <!-- ─── Resultado ─── -->
+        <section class="section-card" id="seccion-resultado" style="display: none;">
+
+            <!-- Estado destacado -->
+            <div class="tracking-estado-header" id="tracking-estado-header"></div>
+
+            <!-- Info del envío -->
+            <div class="tracking-info-grid" id="tracking-info-grid"></div>
+
+            <!-- Historial -->
+            <div class="tracking-historial" id="tracking-historial"></div>
+
+        </section>
+
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/tracking.js"></script>
+
+</body>
+</html>
